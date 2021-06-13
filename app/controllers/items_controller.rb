@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
   end
 
   def order # 購入する時のアクションを定義
+    redirect_to new_card_path and return unless current_user.card.present?
   end
 
   private
